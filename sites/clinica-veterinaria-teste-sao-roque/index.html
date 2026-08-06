@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinica Veterinaria Teste</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        .grid-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 16px;
+        }
+        @media (min-width: 768px) {
+            .grid-container { max-width: 960px; }
+        }
+        @media (max-width: 480px) {
+            .grid-container { padding: 0 8px; }
+        }
+        .hero {
+            position: relative;
+            height: 50vh;
+            overflow: hidden;
+            background-image: linear-gradient(to bottom, #ff6b6b, #f3a712);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero h1 {
+            color: white;
+            font-size: 48px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        .section {
+            padding: 40px 0;
+        }
+        @media (min-width: 768px) {
+            .section { padding: 80px 0; }
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+        }
+        .cta {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        .cta button {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 14px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .cta button:hover {
+            background-color: #d9534f;
+        }
+        footer {
+            padding: 24px 0;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <section class="hero">
+            <h1>Bem-vindo à Clinica Veterinaria Teste</h1>
+        </section>
+        <section class="section">
+            <div class="card">
+                <h2>Consulta Clínica</h2>
+                <p>Descubra como podemos cuidar melhor dos seus amigos peludos.</p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="card">
+                <h2>Vacinação</h2>
+                <p>Garanta a saúde e segurança de seu animal com nossas vacinas.</p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="card">
+                <h2>Exames</h2>
+                <p>Acompanhe o bem-estar do seu pet com os nossos exames especializados.</p>
+            </div>
+        </section>
+        <section class="cta">
+            <a href="https://wa.me/5511999999999" target="_blank">
+                <button>Entre em contato</button>
+            </a>
+        </section>
+    </div>
+    <footer>
+        © 2023 Clinica Veterinaria Teste. Todos os direitos reservados.
+    </footer>
+</body>
+</html>
