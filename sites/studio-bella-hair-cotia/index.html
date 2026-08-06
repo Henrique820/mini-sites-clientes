@@ -3,114 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Studio Bella Hair</title>
+<title>Studio Bella Hair - Cotia</title>
 <style>
-  :root {
-    --primary: #6a5acd;
-    --secondary: #add8e6;
-    --accent: #ff6347;
-    --spacing: 8px;
-  }
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-  }
-  h1, h2, h3 {
-    line-height: 1.5;
-  }
-  .container {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 calc(var(--spacing) * 2);
-  }
-  .hero {
-    background: linear-gradient(to bottom, var(--primary) 60%, var(--secondary) 40%);
-    text-align: center;
-    color: #fff;
-    padding: 120px 20px;
-    position: relative;
-  }
-  .hero h1 {
-    font-size: 56px;
-  }
-  .services {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: calc(var(--spacing) * 8) 0;
-  }
-  .service-card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .service-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-  }
-  .service-card img {
-    width: 100%;
-    height: auto;
-  }
-  .contact {
-    background: #fff;
-    text-align: center;
-    padding: calc(var(--spacing) * 8) 0;
-  }
-  .cta {
-    background-color: var(--primary);
-    color: #fff;
-    border-radius: 12px;
-    display: inline-block;
-    padding: 14px 28px;
-    text-decoration: none;
-    transition: all 0.2s ease;
-  }
-  .cta:hover {
-    background-color: darken(var(--primary), 5%);
-  }
+  body { margin: 0; font-family: 'Arial', sans-serif; }
+  .grid-container { display: flex; flex-wrap: wrap; justify-content: center; }
+  .grid-item { flex: 0 1 calc(33.33% - 8px); padding: 8px; box-sizing: border-box; }
+  @media (max-width: 768px) { .grid-item { flex-basis: calc(50% - 8px); } }
+  @media (max-width: 480px) { .grid-item { flex-basis: 100%; } }
+  .hero { position: relative; width: 100%; padding-top: 67%; background-image: linear-gradient(to right, #ff9a9e, #fad0c4); display: flex; align-items: center; justify-content: center; }
+  .hero img { max-width: 80%; margin-bottom: 24px; }
+  .info-section { padding: 80px 16px; background-color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .title { font-size: 48px; line-height: 1.5; color: #333; margin-bottom: 24px; }
+  .subtitle { font-size: 28px; line-height: 1.5; color: #666; margin-bottom: 16px; }
+  .text { font-size: 18px; line-height: 1.5; color: #333; }
+  .card { background-color: #fff; padding: 24px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: all 0.2s ease; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
+  .button { padding: 14px 28px; border: none; background-color: #ff9a9e; color: #fff; border-radius: 12px; cursor: pointer; transition: all 0.2s ease; }
+  .button:hover { background-color: #ea5760; }
+  .cta-section { display: flex; justify-content: center; margin-top: 40px; }
 </style>
 </head>
 <body>
-<div class="container">
-  <div class="hero">
-    <h1>Bem-vindo ao Studio Bella Hair</h1>
-    <a href="https://wa.me/5511977776666" class="cta">Agende seu horário</a>
+
+<div class="hero">
+  <img src="logo.svg" alt="Logo do Studio Bella Hair">
+</div>
+
+<div class="info-section">
+  <h1 class="title">Bem-vindo ao Studio Bella Hair!</h1>
+  <p class="subtitle">Descubra a beleza com nossos serviços de corte, coloração, escova e tratamentos capilares.</p>
+  <p class="text">Nossos produtos veganos e agendamento por WhatsApp nos diferenciam na Cotia. Entre em contato conosco agora!</p>
+</div>
+
+<div class="grid-container">
+  <div class="grid-item card">
+    <h2>Corte</h2>
+    <img src="corte.svg" alt="Icone de corte">
+    <p>Pequenos detalhes, resultados incríveis.</p>
+    <button class="button">Saiba mais</button>
   </div>
-  <div class="services">
-    <div class="service-card">
-      <img src="corte.svg" alt="Corte">
-      <h3>Corte</h3>
-      <p>Sua nova aparência começa aqui.</p>
-    </div>
-    <div class="service-card">
-      <img src="coloracao.svg" alt="Coloração">
-      <h3>Coloração</h3>
-      <p>Versões coloridas que você sempre sonhou.</p>
-    </div>
-    <div class="service-card">
-      <img src="escova.svg" alt="Escova">
-      <h3>Escova</h3>
-      <p>Espessura e conforto em seu cabelo.</p>
-    </div>
-    <div class="service-card">
-      <img src="tratamentos-capilares.svg" alt="Tratamentos Capilares">
-      <h3>Tratamentos Capilares</h3>
-      <p>Cuidados que permitem a saúde do seu cabelo.</p>
-    </div>
+  <div class="grid-item card">
+    <h2>Coloração</h2>
+    <img src="coloracao.svg" alt="Icone de coloração">
+    <p>Cores duradouras e naturais.</p>
+    <button class="button">Agendar</button>
   </div>
-  <div class="contact">
-    <h2>Diferenciais</h2>
-    <ul>
-      <li>Produtos Veganos</li>
-      <li>Agendamento por WhatsApp</li>
-    </ul>
-    <a href="https://wa.me/5511977776666" class="cta">Contato</a>
+  <div class="grid-item card">
+    <h2>Escova</h2>
+    <img src="escova.svg" alt="Icone de escova">
+    <p>Espaço para seus cabelos.</p>
+    <button class="button">Peça agora</button>
+  </div>
+  <div class="grid-item card">
+    <h2>Tratamentos Capilares</h2>
+    <img src="tratamento.svg" alt="Icone de tratamento capilar">
+    <p>Cuidados para cabelos saudáveis.</p>
+    <button class="button">Contate-nos</button>
   </div>
 </div>
+
+<div class="cta-section">
+  <a href="https://wa.me/5511977776666" class="button">WhatsApp</a>
+</div>
+
 </body>
 </html>
